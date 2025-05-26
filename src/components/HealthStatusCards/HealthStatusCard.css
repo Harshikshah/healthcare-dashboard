@@ -1,0 +1,58 @@
+/* HealthStatusCard.css */
+
+.health-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  font-family: 'Inter', sans-serif;
+  min-height: 120px;
+  gap: 8px;
+}
+
+.health-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.health-card-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.health-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.health-card-status {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.health-card-progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.health-card-progress-bar {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s ease-in-out;
+}
+
+.health-card-last-checked {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+}

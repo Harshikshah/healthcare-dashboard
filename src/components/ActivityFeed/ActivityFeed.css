@@ -1,0 +1,160 @@
+\/* ActivityFeed.css */
+
+.activity-feed-container {
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Spacing between header and chart */
+  margin-top: 24px; /* Adjust margin as needed for spacing from elements above */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.activity-feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px; /* Space between header and chart */
+}
+
+.activity-feed-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0; /* Remove default margin */
+}
+
+.activity-feed-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0; /* Remove default margin */
+}
+
+.activity-chart-area {
+  display: flex;
+  justify-content: space-around; /* Distribute columns evenly */
+  align-items: flex-end; /* Align bars to the bottom */
+  height: 120px; /* Fixed height for the chart area */
+  background-color: #f8fafc; /* Light background for the chart */
+  border-radius: 12px;
+  padding: 10px 15px; /* Padding inside the chart area */
+  box-sizing: border-box;
+}
+
+.activity-day-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align bars to the bottom of their column */
+  align-items: center;
+  width: calc(100% / 7); /* Divide width equally among 7 days */
+  height: 100%; /* Take full height of chart area */
+  position: relative; /* For positioning bars within */
+  padding-bottom: 20px; /* Space for day labels */
+  box-sizing: border-box;
+}
+
+/* Add vertical separators between columns */
+.activity-day-column.has-separator {
+  border-right: 1px solid #e0e0e0; /* Light grey separator */
+}
+
+.activity-bar {
+  width: 10px; /* Width of each bar */
+  border-radius: 5px; /* Rounded corners for bars */
+  margin-bottom: 4px; /* Space between bars in the same column */
+  position: absolute; /* Position bars within the column */
+  bottom: 20px; /* Position above the day label */
+}
+
+/* Specific bar colors and positions */
+.activity-bar-dark-blue {
+  background-color: #4F46E5; /* Darker blue */
+  left: calc(50% - 10px); /* Offset to the left of center */
+}
+
+.activity-bar-light-blue {
+  background-color: #4DD0E1; /* Lighter, more cyan-like blue */
+  right: calc(50% - 10px); /* Offset to the right of center */
+}
+
+.activity-day-label {
+  position: absolute;
+  bottom: 0; /* Position at the very bottom of the column */
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .activity-feed-container {
+    padding: 15px;
+  }
+
+  .activity-feed-title {
+    font-size: 1.4rem;
+  }
+
+  .activity-feed-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .activity-chart-area {
+    height: 100px; /* Smaller height for mobile */
+    padding: 8px 10px;
+  }
+
+  .activity-bar {
+    width: 8px; /* Smaller bar width */
+  }
+
+  .activity-bar-dark-blue {
+    left: calc(50% - 8px);
+  }
+
+  .activity-bar-light-blue {
+    right: calc(50% - 8px);
+  }
+
+  .activity-day-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-feed-container {
+    padding: 10px;
+  }
+
+  .activity-feed-title {
+    font-size: 1.2rem;
+  }
+
+  .activity-feed-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .activity-chart-area {
+    height: 80px;
+    padding: 5px 8px;
+  }
+
+  .activity-bar {
+    width: 6px;
+  }
+
+  .activity-bar-dark-blue {
+    left: calc(50% - 6px);
+  }
+
+  .activity-bar-light-blue {
+    right: calc(50% - 6px);
+  }
+
+  .activity-day-label {
+    font-size: 0.7rem;
+  }
+}
