@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import DashboardMainContent from './components/DashboardMainContent/DashboardMainContent';
-import RightPanel from './components/RightPanel/RightPanel'; // Import the new RightPanel
+import RightPanel from './components/RightPanel/RightPanel'; 
 import './App.css';
 
 function App() {

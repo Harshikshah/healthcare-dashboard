@@ -1,33 +1,33 @@
-/* SimpleAppointmentCard.css */
+
 
 .simple-appointment-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px; /* Increased padding */
+  padding: 15px 20px; 
   border-radius: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   font-family: 'Inter', sans-serif;
-  min-width: 160px; /* Adjusted minimum width */
-  min-height: 70px; /* Ensure a minimum height */
-  box-sizing: border-box; /* Include padding in height */
+  min-width: 160px; 
+  min-height: 70px; 
+  box-sizing: border-box; 
   padding-top: 25px;
 }
 
 .simple-appointment-card-content {
   display: flex;
   flex-direction: column;
-  gap: 6px; /* Increased gap */
+  gap: 6px; 
 }
 
 .simple-appointment-card-title {
-  font-size: 1rem; /* Larger font size */
+  font-size: 1rem; 
   font-weight: 600;
   margin: 0;
 }
 
 .simple-appointment-card-time {
-  font-size: 0.85rem; /* Larger font size */
+  font-size: 0.85rem; 
   font-weight: 500;
 }
 
@@ -38,13 +38,13 @@
 }
 
 .simple-appointment-card-img-icon {
-  width: 24px; /* Larger SVG image icons */
+  width: 24px; 
   height: 24px;
   object-fit: contain;
 }
 
 .simple-appointment-card-default-icon {
-  font-size: 24px; /* Larger emoji/character icons */
+  font-size: 24px; 
   display: flex;
   align-items: center;
   justify-content: center;

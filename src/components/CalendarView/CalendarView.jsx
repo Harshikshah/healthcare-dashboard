@@ -1,43 +1,43 @@
 import React, { useState } from 'react';
-// No longer importing Lucide icons for large cards or nav
+
 import { calendarGridData, largeAppointmentCardsData } from '../../data/calendarData';
 import './CalendarView.css';
 
 const CalendarView = () => {
   const { monthYear, dayLabels, dates, days } = calendarGridData;
 
-  // Function to handle image loading errors for large card icons
+  
   const handleLargeCardImageError = (e) => {
-    e.target.style.display = 'none'; // Hide the broken image
+    e.target.style.display = 'none'; 
     const defaultIconSpan = document.createElement('span');
     defaultIconSpan.className = 'large-appointment-card-default-icon';
-    // Get the default icon from the data based on the card's ID
+    
     const cardId = e.target.dataset.cardId;
     const cardData = largeAppointmentCardsData.find(card => card.id === cardId);
     defaultIconSpan.textContent = cardData?.defaultIcon || '✨';
-    defaultIconSpan.style.color = e.target.style.fill; // Try to match color
+    defaultIconSpan.style.color = e.target.style.fill; 
     e.target.parentNode.insertBefore(defaultIconSpan, e.target);
   };
 
   return (
     <div className="calendar-view-container">
-      {/* Calendar Header */}
+      {}
       <div className="calendar-header">
         <h3 className="calendar-month-year">{monthYear}</h3>
         <div className="calendar-nav-buttons">
-          <span className="calendar-nav-icon">&lt;</span> {/* Left arrow character */}
-          <span className="calendar-nav-icon">&gt;</span> {/* Right arrow character */}
+          <span className="calendar-nav-icon">&lt;</span> {}
+          <span className="calendar-nav-icon">&gt;</span>
         </div>
       </div>
 
-      {/* Calendar Grid */}
+      {}
       <div className="calendar-grid">
-        {/* Day Labels */}
+        {}
         {dayLabels.map((label) => (
           <div key={label} className="calendar-day-label">{label}</div>
         ))}
 
-        {/* Dates and Appointments */}
+        {}
         {dates.map((date, index) => (
           <div key={date} className="calendar-day-cell">
             <span className="calendar-date">{date}</span>
@@ -52,7 +52,7 @@ const CalendarView = () => {
         ))}
       </div>
 
-      {/* Large Appointment Cards */}
+      {}
       <div className="large-appointment-cards-container">
         {largeAppointmentCardsData.map((card) => (
           <div
@@ -70,9 +70,9 @@ const CalendarView = () => {
                 src={card.icon}
                 alt={`${card.title} icon`}
                 className="large-appointment-card-img-icon"
-                style={{ fill: card.textColor }} // Attempt to color SVG via fill
-                onError={handleLargeCardImageError} // Set error handler
-                data-card-id={card.id} // Pass ID for error handler to find default icon
+                style={{ fill: card.textColor }} 
+                onError={handleLargeCardImageError} 
+                data-card-id={card.id} 
               />
             </div>
           </div>

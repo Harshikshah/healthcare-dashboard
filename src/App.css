@@ -1,8 +1,8 @@
-/* Basic global styles for the app */
+
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif; /* Ensure Inter font is applied globally */
-  background-color: #f9fafb; /* Light gray background for the body */
+  font-family: 'Inter', sans-serif; 
+  background-color: #f9fafb; 
   overflow: hidden;
 }
 
@@ -17,8 +17,8 @@ body {
 
 .main-content-area {
   flex-grow: 1;
-  height: 100vh;              /* critical: take full screen height */
-  overflow: hidden;           /* no scroll */
+  height: 100vh;              
+  overflow: hidden;           
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -34,7 +34,7 @@ body {
   border-radius: 24px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 32px;
-  min-height: calc(100vh - 32px - 32px); /* 100vh - (2 * margin from sidebar) - (2 * padding from main-content-area) */
+  min-height: calc(100vh - 32px - 32px); 
 }
 
 .main-content-title {

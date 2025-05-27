@@ -1,6 +1,6 @@
 import React from 'react';
-import HealthStatusCard from './HealthStatusCard'; // Imports the single card component
-import { healthStatusData } from '../../data/healthData'; // Imports mock data
+import HealthStatusCard from './HealthStatusCard'; 
+import { healthStatusData } from '../../data/healthData'; 
 import './HealthStatusCards.css';
 
 const HealthStatusCards = () => {
@@ -8,7 +8,7 @@ const HealthStatusCards = () => {
     <div className="health-cards-container">
       {healthStatusData.map((data) => (
         <HealthStatusCard
-          key={data.id} // Important for React list rendering
+          key={data.id} 
           title={data.title}
           status={data.status}
           value={data.value}

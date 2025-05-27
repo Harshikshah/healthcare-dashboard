@@ -1,18 +1,18 @@
-/* UpcomingSchedule.css */
+
 
 .upcoming-schedule-container {
   background-color: #ffffff;
   border-radius: 24px;
-  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
-  padding: 25px; /* Increased padding */
+  
+  padding: 25px; 
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Increased space between title and day groups */
+  gap: 20px; 
 }
 
 .upcoming-schedule-title {
-  font-size: 1.4rem; /* Larger font size */
+  font-size: 1.4rem; 
   font-weight: 600;
   color: #374151;
 }
@@ -20,11 +20,11 @@
 .upcoming-schedule-day-group {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Increased space between day label and cards */
+  gap: 15px; 
 }
 
 .upcoming-schedule-day-label {
-  font-size: 1rem; /* Larger font size */
+  font-size: 1rem; 
   font-weight: 500;
   color: #6b7280;
   margin: 0;
@@ -32,11 +32,11 @@
 
 .upcoming-schedule-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted min-width for cards */
-  gap: 15px; /* Increased space between simple appointment cards */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  gap: 15px; 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1024px) {
   .upcoming-schedule-cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -55,7 +55,7 @@
     font-size: 0.9rem;
   }
   .upcoming-schedule-cards-grid {
-    grid-template-columns: 1fr; /* Stack cards on very small screens */
+    grid-template-columns: 1fr; 
   }
 }
 

@@ -1,4 +1,4 @@
-/* DashboardMainContent.css */
+
 
 .dashboard-main-content {
   display: flex;
@@ -7,7 +7,7 @@
   padding-left: 50px;
   padding-right: 100px;
   background-color: #ffffff;
-  /* border-radius: 24px; */
+  
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
   font-family: 'Inter', sans-serif;
   height: 100%;
@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px; /* reduced from 24px+ */
+  margin-bottom: 8px; 
   width: 100%;
 }
 
@@ -66,7 +66,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0;       /* remove top margin */
+  margin-top: 0;       
 }
 
 .dashboard-title {
@@ -95,7 +95,7 @@
   display: grid;
   grid-template-columns: 1.7fr 1.3fr;
   gap: 24px;
-  align-items: stretch; /* ensure both children stretch equally */
+  align-items: stretch; 
   height: 360px;
 }
 
@@ -109,7 +109,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  height: 100%; /* stretch to match height of sibling (cards) */
+  height: 100%; 
   box-sizing: border-box;
 }
 
@@ -168,9 +168,9 @@
 .health-status-cards-section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Even spacing */
+  justify-content: space-between; 
   gap: 16px;
-  height: 90%; /* Match anatomy section height */
+  height: 90%; 
   margin-left: 80px;
   width: 90%;
 }
@@ -186,32 +186,9 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  position: relative;    /* Ensure it doesn’t float */
-  clear: both;           /* Prevent overlap with previous flex/grid */
+  position: relative;    
+  clear: both;           
   z-index: 1;
   margin-left: auto;
   margin-right: auto;
-}
-
-
-.activity-placeholder-title {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #374151;
-}
-
-.activity-placeholder-text {
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-.activity-chart-placeholder {
-  background-color: #e2e8f0;
-  height: 80px;
-  border-radius: 8px;
-  margin-top: 12px;
-}
-
-.health-label{
-  line-height: 1.5;
 }

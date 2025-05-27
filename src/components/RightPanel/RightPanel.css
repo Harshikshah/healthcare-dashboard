@@ -1,18 +1,18 @@
-/* RightPanel.css */
+
 
 .right-panel-container {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjusted space between sections */
-  padding: 20px; /* Adjusted padding around the entire right panel */
+  gap: 20px; 
+  padding: 20px; 
   font-family: 'Inter', sans-serif;
-  flex-basis: 400px; /* Adjusted preferred width for the right panel */
+  flex-basis: 400px; 
   flex-grow: 0;
   flex-shrink: 0;
   box-sizing: border-box;
-  overflow-y: auto; /* Allow scrolling within the right panel if its content exceeds height */
-  background-color: #f6faff; /* Ensure background is white for shadow to be visible */
-  border-radius: 24px; /* Apply border-radius for consistency */
+  overflow-y: auto; 
+  background-color: #f6faff; 
+  border-radius: 24px; 
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   box-shadow: 8px 8px 15px -5px rgba(0, 0, 0, 0.2);
@@ -24,12 +24,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 15px; /* Adjusted space between avatar and add button */
+  gap: 15px; 
   margin-bottom: 10px;
 }
 
 .user-profile-avatar {
-  width: 40px; /* Adjusted avatar size */
+  width: 40px; 
   height: 40px;
   border-radius: 20%;
   overflow: hidden;
@@ -47,7 +47,7 @@
   background-color: #4F46E5;
   color: white;
   border-radius: 20%;
-  padding: 10px; /* Adjusted padding around the plus icon */
+  padding: 10px; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,14 +56,14 @@
 }
 
 .add-button-img-icon {
-  width: 20px; /* Adjusted SVG image icon size */
+  width: 20px; 
   height: 20px;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
 
 .add-button-default-icon {
-  font-size: 20px; /* Adjusted character icon size */
+  font-size: 20px; 
   font-weight: bold;
   line-height: 1;
   display: flex;
@@ -72,7 +72,7 @@
 }
 
 
-/* Responsive adjustments for RightPanel */
+
 @media (max-width: 1024px) {
   .right-panel-container {
     flex-basis: auto;

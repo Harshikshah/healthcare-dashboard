@@ -3,12 +3,11 @@
 .calendar-view-container {
   background-color: #ffffff;
   border-radius: 24px;
-  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
-  padding: 25px; /* Increased padding */
+  padding: 25px;
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 25px; /* Increased space between sections */
+  gap: 25px;
 }
 
 .calendar-header {
@@ -19,7 +18,7 @@
 }
 
 .calendar-month-year {
-  font-size: 1.4rem; /* Larger font size */
+  font-size: 1.4rem;
   font-weight: 600;
   color: #374151;
   margin: 0;
@@ -27,16 +26,16 @@
 
 .calendar-nav-buttons {
   display: flex;
-  gap: 15px; /* Increased gap */
+  gap: 15px;
 }
 
 .calendar-nav-icon {
   color: #6b7280;
   cursor: pointer;
-  padding: 12px 12px; /* Increased padding for characters */
+  padding: 12px 12px;
   border-radius: 8px;
   background-color: #f3f4f6;
-  font-size: 22px; /* Larger arrow characters */
+  font-size: 22px; 
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -50,12 +49,12 @@
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 12px; /* Increased space between cells */
+  gap: 12px; 
   text-align: center;
 }
 
 .calendar-day-label {
-  font-size: 0.95rem; /* Larger font size */
+  font-size: 0.95rem;
   font-weight: 500;
   color: #9ca3af;
   padding-bottom: 10px;
@@ -65,15 +64,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px; /* Increased space between date and times */
+  gap: 6px; 
   padding: 10px 0;
   border-radius: 8px;
   background-color: #fcfcfc;
-  min-height: 100px; /* Ensure minimum height for cells to prevent overlap */
+  min-height: 100px;
 }
 
 .calendar-date {
-  font-size: 1.1rem; /* Larger font size */
+  font-size: 1.1rem; 
   font-weight: 600;
   color: #374151;
 }

@@ -4,7 +4,7 @@ import './SimpleAppointmentCard.css';
 const SimpleAppointmentCard = ({ title, time, icon, bgColor, textColor, defaultIcon }) => {
   const [imageError, setImageError] = useState(false);
 
-  // Function to handle image loading errors
+  
   const handleImageError = () => {
     setImageError(true);
   };
@@ -16,17 +16,17 @@ const SimpleAppointmentCard = ({ title, time, icon, bgColor, textColor, defaultI
         <p className="simple-appointment-card-time" style={{ color: textColor }}>{time}</p>
       </div>
       <div className="simple-appointment-card-icon-container">
-        {imageError || !icon ? ( // Show default icon if image fails or icon path is missing
+        {imageError || !icon ? ( 
           <span className="simple-appointment-card-default-icon" style={{ color: textColor }}>
-            {defaultIcon || '✨'} {/* Fallback to a generic emoji if defaultIcon is not provided */}
+            {defaultIcon || '✨'} 
           </span>
         ) : (
           <img
             src={icon}
             alt={`${title} icon`}
             className="simple-appointment-card-img-icon"
-            style={{ fill: textColor }} // Attempt to color SVG via fill
-            onError={handleImageError} // Set error handler
+            style={{ fill: textColor }} 
+            onError={handleImageError} 
           />
         )}
       </div>
