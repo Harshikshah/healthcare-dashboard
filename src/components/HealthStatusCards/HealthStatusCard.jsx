@@ -19,7 +19,7 @@ const HealthStatusCard = ({ title, status, value, lastChecked, icon, color, bgCo
           style={{ width: `${value}%`, backgroundColor: color }}
         ></div>
       </div>
-      <p className="health-card-last-checked">Last checked: {lastChecked}</p>
+      <p className="health-card-last-checked">Date: {lastChecked}</p>
     </div>
   );
 };

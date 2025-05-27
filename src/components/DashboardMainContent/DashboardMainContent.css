@@ -4,8 +4,10 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
+  padding-left: 50px;
+  padding-right: 100px;
   background-color: #ffffff;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
   font-family: 'Inter', sans-serif;
   height: 100%;
@@ -13,6 +15,7 @@
   box-sizing: border-box;
   gap: 16px;
   overflow: hidden;
+  margin-right: 0px;
 }
 
 .main-content-header {
@@ -167,8 +170,9 @@
   flex-direction: column;
   justify-content: space-between; /* Even spacing */
   gap: 16px;
-  height: 100%; /* Match anatomy section height */
+  height: 90%; /* Match anatomy section height */
   margin-left: 80px;
+  width: 90%;
 }
 
 
@@ -185,6 +189,8 @@
   position: relative;    /* Ensure it doesn’t float */
   clear: both;           /* Prevent overlap with previous flex/grid */
   z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 

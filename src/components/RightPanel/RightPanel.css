@@ -1,0 +1,121 @@
+/* RightPanel.css */
+
+.right-panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjusted space between sections */
+  padding: 20px; /* Adjusted padding around the entire right panel */
+  font-family: 'Inter', sans-serif;
+  flex-basis: 400px; /* Adjusted preferred width for the right panel */
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Allow scrolling within the right panel if its content exceeds height */
+  background-color: #f6faff; /* Ensure background is white for shadow to be visible */
+  border-radius: 24px; /* Apply border-radius for consistency */
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  box-shadow: 8px 8px 15px -5px rgba(0, 0, 0, 0.2);
+  margin-top: 16px;
+  padding-bottom: 26px;
+}
+
+.user-profile-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px; /* Adjusted space between avatar and add button */
+  margin-bottom: 10px;
+}
+
+.user-profile-avatar {
+  width: 40px; /* Adjusted avatar size */
+  height: 40px;
+  border-radius: 20%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #E0E7FF;
+}
+
+.add-button-container {
+  background-color: #4F46E5;
+  color: white;
+  border-radius: 20%;
+  padding: 10px; /* Adjusted padding around the plus icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.add-button-img-icon {
+  width: 20px; /* Adjusted SVG image icon size */
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.add-button-default-icon {
+  font-size: 20px; /* Adjusted character icon size */
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Responsive adjustments for RightPanel */
+@media (max-width: 1024px) {
+  .right-panel-container {
+    flex-basis: auto;
+    width: 100%;
+    padding: 15px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-panel-container {
+    padding: 12px;
+    gap: 12px;
+  }
+  .user-profile-avatar {
+    width: 36px;
+    height: 36px;
+  }
+  .add-button-container {
+    padding: 6px;
+  }
+  .add-button-img-icon, .add-button-default-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-panel-container {
+    padding: 10px;
+    gap: 10px;
+  }
+  .user-profile-avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .add-button-container {
+    padding: 5px;
+  }
+  .add-button-img-icon, .add-button-default-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}

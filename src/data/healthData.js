@@ -15,7 +15,7 @@ export const healthStatusData = [
     id: 'teeth',
     title: 'Teeth',
     status: 'Cavity detected',
-    value: 60,
+    value: 45,
     lastChecked: '20 May 2025',
     icon: '/teeth.svg', // Updated to direct path
     color: '#EF4444', // Red for Warning/Cavity (tailwind: red-500)
@@ -25,7 +25,7 @@ export const healthStatusData = [
     id: 'bone',
     title: 'Bone',
     status: 'Good',
-    value: 35,
+    value: 80,
     lastChecked: '15 May 2025',
     icon: '/bone.svg', // Updated to direct path
     color: '#22C55E', // Green for Good (tailwind: green-500)

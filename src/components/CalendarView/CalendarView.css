@@ -1,0 +1,256 @@
+/* CalendarView.css */
+
+.calendar-view-container {
+  background-color: #ffffff;
+  border-radius: 24px;
+  /* box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); */
+  padding: 25px; /* Increased padding */
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 25px; /* Increased space between sections */
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-month-year {
+  font-size: 1.4rem; /* Larger font size */
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.calendar-nav-buttons {
+  display: flex;
+  gap: 15px; /* Increased gap */
+}
+
+.calendar-nav-icon {
+  color: #6b7280;
+  cursor: pointer;
+  padding: 12px 12px; /* Increased padding for characters */
+  border-radius: 8px;
+  background-color: #f3f4f6;
+  font-size: 22px; /* Larger arrow characters */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-nav-icon:hover {
+  background-color: #e5e7eb;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px; /* Increased space between cells */
+  text-align: center;
+}
+
+.calendar-day-label {
+  font-size: 0.95rem; /* Larger font size */
+  font-weight: 500;
+  color: #9ca3af;
+  padding-bottom: 10px;
+}
+
+.calendar-day-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* Increased space between date and times */
+  padding: 10px 0;
+  border-radius: 8px;
+  background-color: #fcfcfc;
+  min-height: 100px; /* Ensure minimum height for cells to prevent overlap */
+}
+
+.calendar-date {
+  font-size: 1.1rem; /* Larger font size */
+  font-weight: 600;
+  color: #374151;
+}
+
+.calendar-appointments {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Increased gap */
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.calendar-appointment-time {
+  font-size: 0.85rem; /* Larger font size */
+  background-color: #E0E7FF;
+  color: #4F46E5;
+  padding: 10px 10px; /* Increased padding */
+  border-radius: 6px;
+  font-weight: 500;
+  margin: 0 6px; /* Increased horizontal margin */
+}
+
+/* Specific styling for selected/active time slots if needed, as per image */
+.calendar-day-cell:nth-child(even) .calendar-appointment-time:nth-child(2) {
+    background-color: #4F46E5;
+    color: #ffffff;
+}
+.calendar-day-cell:nth-child(odd) .calendar-appointment-time:nth-child(1) {
+    background-color: #4F46E5;
+    color: #ffffff;
+}
+
+
+.large-appointment-cards-container {
+  display: flex;
+  gap: 20px; /* Increased space between the two large cards */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.large-appointment-card {
+  display: flex;
+  align-items: center;
+  padding: 20px 25px; /* Increased padding */
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  flex: 1;
+  min-width: 280px; /* Increased minimum width for cards */
+  min-height: 100px; /* Ensure minimum height to prevent content overlap */
+}
+
+.large-appointment-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.large-appointment-card-title {
+  font-weight: 600;
+}
+
+.large-appointment-card-time {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.large-appointment-card-doctor {
+  font-size: 0.9rem;
+}
+
+.large-appointment-card-icon-container {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.large-appointment-card-img-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.large-appointment-card-default-icon {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Specific styles for the dark blue large card */
+.large-appointment-card[style*="background-color: rgb(79, 70, 229)"] .large-appointment-card-doctor {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Specific styles for the light blue large card */
+.large-appointment-card[style*="background-color: rgb(219, 234, 254)"] .large-appointment-card-doctor {
+  color: #60A5FA;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .calendar-grid {
+    gap: 8px;
+  }
+  .calendar-appointment-time {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+  .large-appointment-cards-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .large-appointment-card {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-view-container {
+    padding: 20px;
+  }
+  .calendar-month-year {
+    font-size: 1.2rem;
+  }
+  .calendar-nav-icon {
+    padding: 5px 8px;
+  }
+  .calendar-grid {
+    gap: 6px;
+  }
+  .calendar-day-label {
+    font-size: 0.85rem;
+  }
+  .calendar-date {
+    font-size: 0.95rem;
+  }
+  .large-appointment-card {
+    padding: 18px 20px;
+  }
+  .large-appointment-card-title {
+    font-size: 1.1rem;
+  }
+  .large-appointment-card-time, .large-appointment-card-doctor {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-view-container {
+    padding: 15px;
+  }
+  .calendar-month-year {
+    font-size: 1.1rem;
+  }
+  .calendar-grid {
+    gap: 4px;
+  }
+  .calendar-day-cell {
+    padding: 8px 0;
+  }
+  .calendar-appointment-time {
+    font-size: 0.7rem;
+    margin-top: 10px;
+  }
+  .large-appointment-card {
+    padding: 15px 18px;
+  }
+  .large-appointment-card-title {
+    font-size: 1rem;
+  }
+  .large-appointment-card-time, .large-appointment-card-doctor {
+    font-size: 0.75rem;
+  }
+}
